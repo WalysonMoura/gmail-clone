@@ -1,3 +1,5 @@
+import '@/styles/global.css'
+
 import { Loading } from '@/components/loading';
 import {
   useFonts,
