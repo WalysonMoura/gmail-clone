@@ -1,17 +1,20 @@
-import { MaterialIcons } from "@expo/vector-icons";
-import { DrawerActions } from "@react-navigation/native";
-import { Pressable } from "react-native";
+import { Pressable } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import { useNavigation } from 'expo-router';
+import { DrawerActions } from '@react-navigation/native';
 
-import { useNavigation } from "expo-router"
-import { colors } from "@/styles/colors"
+import { colors } from '@/styles/colors';
+
+import React from 'react';
 
 export function MenuButton() {
-    const navigation = useNavigation()
+  const navigation = useNavigation();
 
-    const toggleMenu = () => navigation.dispatch(DrawerActions.toggleDrawer())
-    return(
-        <Pressable onPress={toggleMenu}>
-<MaterialIcons name="menu" size={22} color={colors.white}/>
-        </Pressable>
-    )
+  const toggleMenu = () => navigation.dispatch(DrawerActions.toggleDrawer());
+
+  return (
+    <Pressable onPress={toggleMenu}>
+      <MaterialIcons name="menu" size={22} color={colors.white} />
+    </Pressable>
+  );
 }
