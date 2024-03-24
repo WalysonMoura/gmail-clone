@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import React from 'react';
 import { Image, ImageProps } from 'react-native';
 
 type AvatarProps = ImageProps & {
