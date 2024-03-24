@@ -15,6 +15,17 @@ export default function DrawerLayout() {
       }}
       drawerContent={(props) => <DrawerContent {...props} />}>
       <Drawer.Screen
+        name="(tabs)"
+        options={
+          {
+            title: 'Todas as Caixas de entrada',
+            iconName: 'all-inbox',
+            notifications: 5,
+            isDivider: true,
+          } as CustomOptions
+        }
+      />
+      <Drawer.Screen
         name="index"
         options={
           {
